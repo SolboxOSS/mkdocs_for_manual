@@ -79,8 +79,8 @@
   language, icons, favicon and logo. Add a source repository link, links to your
   social profiles, Google Analytics and Disqus - all with a few lines of code.
 
-* **Truly international** — thanks to many contributors, Material for MkDocs 
-  includes translations for more than 40 languages and offers full native RTL 
+* **Truly international** — thanks to many contributors, Material for MkDocs
+  includes translations for more than 40 languages and offers full native RTL
   (right-to-left) support for languages such as Arabic, Persian (Farsi) and
   Hebrew.
 
