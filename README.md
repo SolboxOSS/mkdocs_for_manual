@@ -1,194 +1,84 @@
-<p align="center">
-  <a href="https://squidfunk.github.io/mkdocs-material/">
-    <img src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/logo.png" width="320" alt="Material for MkDocs">
-  </a>
-</p>
+# G-Express 서비스란?
 
-<p align="center">
-  <strong>
-    A
-    <a href="https://material.io/">Material Design</a>
-    theme for
-    <a href="https://www.mkdocs.org/">MkDocs</a>
-  </strong>
-</p>
+G-Express 서비스는 글로벌 이용자에게 전용망 기반의 인터넷 어플리케이션 가속 서비스와 라이 초 저지연 스트리밍 서비스를 제공합니다. 이를 통해 콘텐츠 창작자의 원스톱 OTT 라이브 스트리밍 서비스 개설을 제공하고, 인터넷 어플리케이션 서비스의 패킷 손실과 서비스 전송 지연을 최소화하여 사용자 경험을 향상 시킵니다.
 
-<p align="center">
-  <a href="https://github.com/squidfunk/mkdocs-material/actions"><img
-    src="https://github.com/squidfunk/mkdocs-material/workflows/ci/badge.svg?branch=master"
-    alt="GitHub Action"
-  /></a>
-  <a href="https://pypistats.org/packages/mkdocs-material"><img
-    src="https://img.shields.io/pypi/dm/mkdocs-material.svg"
-    alt="Downloads"
-  /></a>
-  <a href="https://gitter.im/squidfunk/mkdocs-material"><img
-    src="https://badges.gitter.im/squidfunk/mkdocs-material.svg"
-    alt="Chat on Gitter"
-  /></a>
-  <a href="https://pypi.org/project/mkdocs-material"><img
-    src="https://img.shields.io/pypi/v/mkdocs-material.svg"
-    alt="Python Package Index"
-  /></a>
-  <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/"><img
-    src="https://img.shields.io/docker/pulls/squidfunk/mkdocs-material"
-    alt="Docker Pulls"
-  /></a>
-  <a href="https://squidfunk.github.io/mkdocs-material/insiders/"><img
-    src="https://img.shields.io/static/v1?label=%E2%86%92&message=insiders&color=e91e63"
-  /></a>
-</p>
+G-Express 서비스는 글로벌 어플리케이션 가속 서비스와 라이브 트랜스코딩 서비스로 구성됩니다.&#x20;
 
-<p align="center">
-  Create a branded static site from a set of Markdown files to host the
-  documentation of your Open Source or commercial project – customizable,
-  searchable, mobile-friendly, 40+ languages. Set up in 5 minutes.
-</p>
+## 글로벌 어플리케이션 가속 서비스
 
-<p align="center">
-  <a href="https://squidfunk.github.io/mkdocs-material/getting-started/">
-    <img src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/screenshot.png" width="700" />
-  </a>
-</p>
+글로벌 어플리케이션 가속 서비스는 품질향상이 필요한 글로벌 서비스 지역에 클라우드 전용망 기반의 어플리케이션 가속 서비스와 라이브 초 저지연 스트리밍 서비스를 제공합니다.&#x20;
 
-<p align="center">
-  <em>
-    A demo is worth a thousand words — check it out at
-    <a
-      href="https://squidfunk.github.io/mkdocs-material/"
-    >squidfunk.github.io/mkdocs-material</a>.
-  </em>
-</p>
+이를 통해 라이브 스트리밍, 온라인 게임, 스마트 오피스, 온라인 교육 등의 어플리케이션 서비스의 글로벌 사용자 경험을 향상 시킵니다.
 
-## Features
+<figure><img src=".gitbook/assets/image (35).png" alt=""><figcaption><p>Global Application Acceleration</p></figcaption></figure>
 
-* **It's just Markdown** — write your technical documentation in plain Markdown
-  – no need to know HTML, JavaScript, or CSS. Material for MkDocs will do the
-  heavy lifting and convert your writing to a beautiful and functional website.
+### 시스템 구성
 
-* **Responsive by design** — built from the ground up to work on all sorts of
-  devices – from mobile phones to widescreens. The underlying fluid layout will
-  always adapt perfectly to the available screen space.
+고객은 글로벌 가속 서비스를 이용하기 위해서 글로벌 가속기(Accelerator)를 생성해야 합니다. 글로벌 가속기는 리스너와 엔드포인트로 구성되며, 고객의 인터넷 어플리케이션 서비스 이용자가 요청한 데이터는 글로벌 가속기(Accelerator)를 통해 가속 전송됩니다. &#x20;
 
-* **Static, yet searchable** — almost magically, your technical documentation
-  website will be searchable without any further ado. Material for MkDocs comes
-  with built-in search – no server needed – that will instantly answer your
-  users' queries.
+#### Listener
 
-* **Many configuration options** — change the color palette, font families,
-  language, icons, favicon and logo. Add a source repository link, links to your
-  social profiles, Google Analytics and Disqus - all with a few lines of code.
+Accelerator를 구성하는 SW 모듈로 Listener는  사용자가 오리진 서버로 요청하는 데이터를 직접 수신하여, Backend Server 가 위치한 region의 Endpoint로 사용자 데이터를 가속 전송하는 역할을 합니다. 고객은 글로벌 어플리케이션 가속이 필요한  사용자가 위치한 region에 Listener를 생성해야 합니다.&#x20;
 
-* **Truly international** — thanks to many contributors, Material for MkDocs
-  includes translations for more than 40 languages and offers full native RTL
-  (right-to-left) support for languages such as Arabic, Persian (Farsi) and
-  Hebrew.
+#### Endpoint
 
-* **Accessible** — Material for MkDocs provides extensible keyboard navigation
-  and semantic markup including role attributes and landmarks. Furthermore, the
-  layout is entirely based on `rem` values, respecting the user's default font
-  size.
+Accelerator를 구성하는 SW 모듈로 Listener로 부터 수신한 사용자의 요청 데이터를 Backend Server로 가속 전송하는 역할을 수행합니다. 고객은 글로벌 어플리케이션 가속이 필요한 Backend Server가 위치한 region에 Endpoint를 생성해야 합니다.
 
-* **Beyond GitHub Markdown** — integrates natively with Python Markdown
-  Extensions, offering additional elements like callouts, tabbed content
-  containers, mathematical formulas, critic markup, task lists, and emojis.
+## 라이브 트랜스코딩 서비스
 
-* **Modern architecture** — Material for MkDocs's underlying codebase is built
-  with TypeScript, RxJS, and SCSS, and is compiled with Webpack, bringing
-  excellent possibilities for theme extension and customization.
+라이브 트랜스코딩 서비스는 원본 라이브 영상을 인터넷의 다양한 사용자 단말기에서 재생할 수 있도록 손쉽게 최적의 해상도와 화질의 영상 스트림을 생성하고, 사용자의 접속환경에 상관없이 버퍼링이나 끊김없는 영상 스트리밍 서비스를 제공합니다. 또한, 글로벌 어플리케이션 가속서비스와 연동하여 라이브 초 저지연 스트리밍 서비스를 제공합니다.
 
-_Material for MkDocs uses the [sponsorware][2] release strategy, which means
-that new features are first exclusively released to sponsors as part of Material
-for MkDocs Insiders. Read on to learn [how sponsorship works][3], and how you
-can [become a sponsor][4]._
 
-  [2]: https://github.com/sponsorware/docs
-  [3]: https://squidfunk.github.io/mkdocs-material/insiders/#how-sponsorship-works
-  [4]: https://squidfunk.github.io/mkdocs-material/insiders/#how-to-become-a-sponsor
 
-## Quick start
-### Test
+<figure><img src=".gitbook/assets/image (21).png" alt=""><figcaption><p>Live Media Acceleration</p></figcaption></figure>
 
-Material for MkDocs can be installed with `pip`:
+### 시스템 구성
 
-``` sh
-pip install mkdocs-material
-```
+고객은 라이브 초 저지연 스트리밍 서비스를 이용하기 위해서 라이브 트랜스코더를 생성해야 합니다. 라이브 트랜스코더는 트랜스코더와 라이브 스트리머로 구성되며, 글로벌 가속기(Accelerator)와 연동을 통해 라이브 초 저지연 스트리밍 서비스를 수행 합니다. &#x20;
 
-Add the following line to `mkdocs.yml`:
+#### 트랜스코더
 
-``` yaml
-theme:
-  name: material
-```
+실시간 트랜스코딩: 원본 라이브 영상을 입수하여, 다양한 사용자의 단말기에서 재생할 수 있도록 해상도와 화질을 실시간으로 변환하여 생성합니다.
 
-For other installation methods, configuration options, and a demo, visit
-[squidfunk.github.io/mkdocs-material][1]
+리스트리밍: 입수한 원본 라이브 영상을 기존의 OTT 플랫폼(Youtube, Twitch, NaverTV)으로 재송출 합니다.&#x20;
 
-  [1]: https://squidfunk.github.io/mkdocs-material/
+DVR: 실시간 라이브 스트리밍 영상을 녹화 저장 합니다.
 
-## Premium Sponsors
 
-<p>
-  <a href="https://docs.baslerweb.com/" target=_blank><img
-    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/basler.png" width="155"
-  /></a>
-  <a href="https://cirrus-ci.org/" target=_blank><img
-    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/cirrus-ci.svg" width="155"
-  /></a>
-</p>
 
-## Users
+#### 라이브 스트리머
 
-* **Companies** —
-  [AWS](https://aws.github.io/copilot-cli/),
-  [Binance](https://docs.binance.org/),
-  [Datadog](https://datadoghq.dev/integrations-core/),
-  [ING](https://ing-bank.github.io/baker/),
-  [Lyft](https://lyft.github.io/amundsen/),
-  [Microsoft](https://www.electionguard.vote/),
-  [Netflix](https://netflix.github.io/titus/),
-  [Salesforce](https://policy-sentry.readthedocs.io/en/latest/),
-  [SAP](https://sap.github.io/ui5-tooling/),
-  [SoundCloud](https://intervene.dev/),
-  [Spotify](https://spotify.github.io/mkdocs-monorepo-plugin/),
-  [Square](https://square.github.io/okhttp/),
-  [Uber](https://ludwig-ai.github.io/ludwig-docs/getting_started/),
-  [Zalando](https://opensource.zalando.com/skipper/)
+변환된 라이브 영상을 인터넷 전송이 가능하도록 패키징 하고, HTTP 기반스트리밍으로 송출 합니다.
 
-* **Open Source** —
-  [AutoKeras](https://autokeras.com/),
-  [BFE](https://www.bfe-networks.net/),
-  [FastAPI](https://fastapi.tiangolo.com/),
-  [Kubernetes](https://kops.sigs.k8s.io/),
-  [Nokogiri](https://nokogiri.org/),
-  [OpenFaaS](https://docs.openfaas.com/),
-  [Pi-Hole](https://docs.pi-hole.net/),
-  [Pydantic](https://pydantic-docs.helpmanual.io/),
-  [Traefik](https://docs.traefik.io/),
-  [Vapor](https://docs.vapor.codes/),
-  [ZeroNet](https://zeronet.io/docs/)
+글로벌 어플리케이션 라이브 가속서비스와 연동하여 라이브 초저지연 스트리밍 송출을 제공합니다.&#x20;
 
-## License
 
-**MIT License**
 
-Copyright (c) 2016-2020 Martin Donath
+## 활용분야
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to
-deal in the Software without restriction, including without limitation the
-rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-sell copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+### 실시간 스트리밍 서비스
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+라이브 콘텐츠 창작나 공급자가 제공하는 인터넷 라이브 스트리밍은 HTTP의 라이브 스트리밍 규약에 따라 라이브 스트리밍 송출 후 서비스 사용자가 라이브 콘텐츠를 시청하는데 약 10\~15초의 지연이 발생합니다. G-Express가 제공하는 라이브 초 저지연 스트리밍 서비스는 인터넷 라이브 스트리밍 송출과 사용자의 시청 시간의 차이를 3초 이내로 줄여 인터넷 라이브 스트리밍 서비스의 사용자 품질을 개선합니다.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-IN THE SOFTWARE.
+
+
+<figure><img src=".gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+
+### 글로벌 게임 가속 서비스
+
+글로벌 게임 서비스 이용자가 원격의 게임서버에 접속할때, 이용자가 접속하는 지역에 따라 서비스 품질의 편차가 발생할 수 있습니다. 이러한, 글로벌 서비스 이용자의 지역별 서비스 품질 차이는 게임 이용자간 불공정한 서비스 환경을 만듭니다. G-Express가 제공하는 글로벌 가속 서비스는 글로벌 서비스 이용자 접속지역과 게임서버 간 전용망을 통한 가속 서비스로 글로벌 게임 이용자간 균등한 서비스를 보장해 줍니다.
+
+![Online Game Service](.gitbook/assets/Intro\_usage\_gameservice.png)
+
+### 스마트 오피스 가속 서비스
+
+글로벌 기업에서 운영하고 있는 온프로미스 오피스를 클라우드 기반의 스마트 오피스로 변경할 경우 글로벌 지역 사무소는 여전히 본사와의 전용망을 통한 스마트 오피스 서비스 접속으로 인한 서비스 품질저하가 빈번하게 일어나고 있습니다. 이 경우 글로벌 지역 사무소와 스마트 오피스 서비스 지역간 글로벌 가속 서비스를 개설하여 글로벌 지역 사무소의 스마트 오피스 서비스 품질을 대폭 개선할 수 있습니다.
+
+![Smart Office Service](.gitbook/assets/Intro\_usage\_smartoffice.png)
+
+
+
+##
+
+
+
